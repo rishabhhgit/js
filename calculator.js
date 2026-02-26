@@ -1,11 +1,16 @@
-let message = "Hello, JavaScript!";
+const display = document.getElementById("display");
 
-// Blocks are enclosed in curly braces
+function appendtodisplay(input){
+    display.value+=input;
+}
 
-  console.log("This is a code block");
-
-var x = 10; // Variable declaration
-
-function greet(name) {
-  return "Hello, " + name + "!";
+function cleardisplay(){
+    display.value="";
+}
+function calculate(){
+    try{
+    display.value=eval(display.value);
+    }catch(error){
+        display.value="Error";
+    }
 }
